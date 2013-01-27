@@ -18,3 +18,10 @@
   background: "#000"
   color: "#fff"
   font-size: 4vw
+
+- name: git
+  leet: |
+        (,:†
+  background: rgb(240, 240, 232)
+  color: rgb(222, 95, 65)
+  font-size: 8vw
