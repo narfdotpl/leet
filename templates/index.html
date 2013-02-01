@@ -4,49 +4,25 @@
         <meta charset="utf-8">
         <!-- https://github.com/narfdotpl/leet -->
         <title>leet</title>
-
-        <style>
-            body {
-                margin: 0;
-            }
-
-            #container {
-                display: table;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                overflow: hidden;
-                text-align: center;
-            }
-
-            #content {
-                outline: 0;
-                display: table-cell;
-                vertical-align: middle;
-
-                background: #000;
-                font-family: monaco, courier, monospace;
-                font-weight: bold;
-                font-size: 4vw;
-            }
-
-            a {
-                color: #fff;
-                text-decoration: none;
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://lab.narf.pl/naif.css/naif.min.css" rel="stylesheet">
     </head>
     <body>
-        <div id="container">
-            <div id="content">
-                <ul>
-                    {{ inner_ul }}
-                </ul>
-            </div>
+        <div id="main-wrapper" class="narrow">
+
+            <header class="centered">
+                <h1>leet</h1>
+            </header>
+
+            <p>
+                Collection of words and short phrases written in leetspeak by <a href="http://narf.pl/">@narfdotpl</a>.
+                Looks best in Chrome/<a href="https://raw.github.com/narfdotpl/leet/master/screen-shot.png">Safari</a> on a Mac.
+                The <a href="https://github.com/narfdotpl/leet">source</a> is on GitHub.
+            </p>
+
+            <ul>
+                {{ inner_ul }}
+            </ul>
         </div>
 
         <script>
@@ -59,17 +35,6 @@
                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
-        </script>
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-        <script>
-            $(function () {
-                // fix chrome bug: http://css-tricks.com/viewport-sized-typography/
-                var $content = $('#content')
-                $(window).resize(function () {
-                    $content.css('z-index', 1)
-                })
-            })
         </script>
     </body>
 </html>
